@@ -1,0 +1,251 @@
+/* ------------------------------------------ vue transition 过渡动画class ------------------------------------------ */
+// 从上往下淡入，从下往上淡出：1s
+.topToBottom-enter-active {
+	animation-name: topToBottom-in;
+	animation-duration: 1s;
+}
+.topToBottom-leave-active {
+	animation-name: topToBottom-out;
+	animation-duration: 1s;
+}
+
+// 从上往下淡入，从下往上淡出：0.5s
+.topToBottom05-enter-active {
+	animation-name: topToBottom-in;
+	animation-duration: 0.5s;
+}
+.topToBottom05-leave-active {
+	animation-name: topToBottom-out;
+	animation-duration: 0.5s;
+}
+
+// 从上往下淡入，从下往上淡出：0.3s
+.topToBottom03-enter-active {
+	animation-name: topToBottom-in;
+	animation-duration: 0.3s;
+}
+.topToBottom03-leave-active {
+	animation-name: topToBottom-out;
+	animation-duration: 0.3s;
+}
+
+@keyframes topToBottom-in {
+	0% {
+		transform: translate3d(0, -100%, 0);
+		opacity: 0
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+}
+@keyframes topToBottom-out {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+	100% {
+		transform: translate3d(0, -100%, 0);
+		opacity: 0
+	}
+}
+
+// 从下到上淡入，从上到下淡出：1s
+.bottomToTop-enter-active {
+	animation-name: bottomToTop-in;
+	animation-duration: 1s;
+}
+.bottomToTop-leave-active {
+	animation-name: bottomToTop-out;
+	animation-duration: 1s;
+}
+
+// 从下到上淡入，从上到下淡出：0.5s
+.bottomToTop05-enter-active {
+	animation-name: bottomToTop-in;
+	animation-duration: 0.5s;
+}
+.bottomToTop05-leave-active {
+	animation-name: bottomToTop-out;
+	animation-duration: 0.5s;
+}
+
+// 从下到上淡入，从上到下淡出：0.3s
+.bottomToTop03-enter-active {
+	animation-name: bottomToTop-in;
+	animation-duration: 0.3s;
+}
+.bottomToTop03-leave-active {
+	animation-name: bottomToTop-out;
+	animation-duration: 0.3s;
+}
+
+@keyframes bottomToTop-in {
+	0% {
+		transform: translate3d(0, 100%, 0);
+		opacity: 0
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+}
+@keyframes bottomToTop-out {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+	100% {
+		transform: translate3d(0, 100%, 0);
+		opacity: 0
+	}
+}
+
+// 从左往右淡入，从右往左淡出：1s
+.leftToRight-enter-active {
+	animation-name: leftToRight-in;
+	animation-duration: 1s;
+}
+.leftToRight-leave-active {
+	animation-name: leftToRight-out;
+	animation-duration: 1s;
+}
+
+// 从左往右淡入，从右往左淡出：0.5s
+.leftToRight05-enter-active {
+	animation-name: leftToRight-in;
+	animation-duration: 0.5s;
+}
+.leftToRight05-leave-active {
+	animation-name: leftToRight-out;
+	animation-duration: 0.5s;
+}
+
+// 从左往右淡入，从右往左淡出：0.3s
+.leftToRight03-enter-active {
+	animation-name: leftToRight-in;
+	animation-duration: 0.3s;
+}
+.leftToRight03-leave-active {
+	animation-name: leftToRight-out;
+	animation-duration: 0.3s;
+}
+
+@keyframes leftToRight-in {
+	0% {
+		transform: translate3d(-100%, 0, 0);
+		opacity: 0
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+}
+@keyframes leftToRight-out {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0);
+		opacity: 0
+	}
+}
+
+// 从右往左淡入，从左往右淡出：1s
+.rightToLeft-enter-active {
+	animation-name: rightToLeft-in;
+	animation-duration: 1s;
+}
+.rightToLeft-leave-active {
+	animation-name: rightToLeft-out;
+	animation-duration: 1s;
+}
+
+// 从右往左淡入，从左往右淡出：0.5s
+.rightToLeft05-enter-active {
+	animation-name: rightToLeft-in;
+	animation-duration: 0.5s;
+}
+.rightToLeft05-leave-active {
+	animation-name: rightToLeft-out;
+	animation-duration: 0.5s;
+}
+
+// 从右往左淡入，从左往右淡出：0.3s
+.rightToLeft03-enter-active {
+	animation-name: rightToLeft-in;
+	animation-duration: 0.3s;
+}
+.rightToLeft03-leave-active {
+	animation-name: rightToLeft-out;
+	animation-duration: 0.3s;
+}
+
+@keyframes rightToLeft-in {
+	0% {
+		transform: translate3d(100%, 0, 0);
+		opacity: 0
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+}
+@keyframes rightToLeft-out {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+	100% {
+		transform: translate3d(100%, 0, 0);
+		opacity: 0
+	}
+}
+
+// 原地淡入，原地淡出：1s
+.fadeIn-enter-active {
+	animation-name: fadeIn-in;
+	animation-duration: 1s;
+}
+.fadeIn-leave-active {
+	animation-name: fadeIn-out;
+	animation-duration: 1s;
+}
+
+// 原地淡入，原地淡出：0.5s
+.fadeIn05-enter-active {
+	animation-name: fadeIn-in;
+	animation-duration: 0.5s;
+}
+.fadeIn05-leave-active {
+	animation-name: fadeIn-out;
+	animation-duration: 0.5s;
+}
+
+// 原地淡入，原地淡出：0.3s
+.fadeIn03-enter-active {
+	animation-name: fadeIn-in;
+	animation-duration: 0.3s;
+}
+.fadeIn03-leave-active {
+	animation-name: fadeIn-out;
+	animation-duration: 0.3s;
+}
+
+@keyframes fadeIn-in {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+@keyframes fadeIn-out {
+	0% {
+		opacity: 1
+	}
+	100% {
+		opacity: 0
+	}
+}
