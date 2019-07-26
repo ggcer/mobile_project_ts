@@ -111,17 +111,20 @@ declare interface Utils {
     /**
      * 打印成功信息
      * @param msg 要打印的信息，可以为任意类型
+     * @param isCache 是否存入缓存
      */
-    success(msg: any): void
+    success(msg: any, isCache?: boolean): void
     /**
      * 打印错误信息
      * @param msg 要打印的信息，可以为任意类型
+     * @param isCache 是否存入缓存
      */
-    error(msg: any): void
+    error(msg: any, isCache?: boolean): void
     /**
      * 打印普通信息
      * @param msg 要打印的信息，可以为任意类型
+     * @param isCache 是否存入缓存
      */
-    info(msg: any): void
+    info(msg: any, isCache?: boolean): void
   }
 }
