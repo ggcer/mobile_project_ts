@@ -34,9 +34,5 @@ export default class DemoEventBus extends Vue {
     font-size: 13px;
     margin-bottom: 10px;
   }
-  /deep/ .mu-button {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
 }
 </style>
