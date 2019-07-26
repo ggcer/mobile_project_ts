@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <transition :name="transitionName">
-      <!-- 内容注入区 -->
-      <router-view class="router-view"/>
+      <navigation>
+        <!-- 内容注入区 -->
+        <router-view class="router-view"/>
+      </navigation>
     </transition>
   </div>
 </template>

@@ -106,4 +106,22 @@ declare interface Utils {
   http: {
 
   }
+  // log
+  log: {
+    /**
+     * 打印成功信息
+     * @param msg 要打印的信息，可以为任意类型
+     */
+    success(msg: any): void
+    /**
+     * 打印错误信息
+     * @param msg 要打印的信息，可以为任意类型
+     */
+    error(msg: any): void
+    /**
+     * 打印普通信息
+     * @param msg 要打印的信息，可以为任意类型
+     */
+    info(msg: any): void
+  }
 }
