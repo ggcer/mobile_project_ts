@@ -1,7 +1,30 @@
 /* ------------------------------------------ scss mixin ------------------------------------------ */
-// flex
+// 双向居中flex
 @mixin display-flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// line-height与height相同
+@mixin lineheight-height($line-height) {
+  line-height: $line-height;
+  height: $line-height;
+}
+
+// 一行超出显示...
+@mixin overflow-emphasis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 多行超出显示...
+@mixin line-emphasis($lineCount) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineCount;
+  -webkit-box-orient: vertical;
 }
