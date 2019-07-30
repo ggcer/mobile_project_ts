@@ -127,4 +127,18 @@ declare interface Utils {
      */
     info(msg: any, isCache?: boolean): void
   }
+  // format
+  format: {
+    /**
+     * 字符串转日期对象
+     * @param str
+     */
+    strToDate(str: string): Date
+    /**
+     *
+     * @param date 日期对象
+     * @param pattern 格式化模式
+     */
+    dateToStr(date: Date, pattern?: string): string
+  }
 }
