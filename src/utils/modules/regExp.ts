@@ -32,9 +32,11 @@ const regExpMap: {
   number2decimal: /^(\d+(\.\d{1,2})?)?$/, // 数字，最多一位小数
 };
 
+export const getExp = (key: string): RegExp => {
+  return regExpMap[key]
+}
+
 const regExp: Utils['regExp'] = {
-  getExp(key: string): RegExp {
-    return regExpMap[key]
-  },
+  getExp
 }
 export default regExp;
