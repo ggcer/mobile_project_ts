@@ -7,7 +7,7 @@
 }
 
 // line-height与height相同
-@mixin lineheight-height($line-height) {
+@mixin lineheight-height($line-height: 20px) {
   line-height: $line-height;
   height: $line-height;
 }
@@ -20,11 +20,47 @@
 }
 
 // 多行超出显示...
-@mixin line-emphasis($lineCount) {
+@mixin line-emphasis($lineCount: 1) {
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: $lineCount;
   -webkit-box-orient: vertical;
+}
+
+// 清除浮动
+@mixin clearfix {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+// 居中块元素
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 三角形
+@mixin triangle($width: 10px, $height: 10px, $color:red, $direction: top) {
+  $angle-direction: ( top: bottom left right, bottom: top left right, left: right top bottom, right: left top bottom);
+  $conf: map-get($angle-direction, $direction);
+  @if $direction == top or $direction == bottom {
+      $width: $width/2;
+  }
+  @else {
+      $height: $height/2;
+  }
+  width: 0;
+  height: 0;
+  border-#{nth($conf, 1)}: $height solid $color;
+  border-#{nth($conf, 2)}: $width solid transparent;
+  border-#{nth($conf, 3)}: $width solid transparent;
 }
