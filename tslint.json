@@ -24,6 +24,7 @@
     "no-consecutive-blank-lines": false,
     "no-console": false,
     "no-eval": false,
-    "no-shadowed-variable": false
+    "no-shadowed-variable": false,
+    "arrow-parens": false
   }
 }
